@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-twilight-950: #07060e;
+  --color-twilight-900: #0d0a1a;
+  --color-twilight-800: #16122b;
+  --color-twilight-700: #251e44;
+  --color-sunset-violet: #6b21a8;
+  --color-sunset-magenta: #c026d3;
+  --color-sunset-rose: #f43f5e;
+  --color-sunset-coral: #fb7185;
+  --color-sunset-orange: #f97316;
+  --color-sunset-amber: #f59e0b;
+  --color-sunset-gold: #fbbf24;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #07060e;
+  color: #f1f5f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(18, 14, 34, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(251, 113, 133, 0.12);
+}
+
+.glass-panel-subtle {
+  background: rgba(14, 11, 28, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-glow {
+  background: rgba(22, 17, 43, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 35px -5px rgba(244, 63, 94, 0.15), 0 0 15px -3px rgba(245, 158, 11, 0.1);
+}
+
+/* Sunset radial backdrop */
+.sunset-glow-bg {
+  background: radial-gradient(circle at 50% -10%, rgba(244, 63, 94, 0.18) 0%, rgba(168, 85, 247, 0.12) 35%, rgba(13, 10, 26, 0) 75%);
+}
+
+.sunset-horizon-glow {
+  background: linear-gradient(180deg, rgba(244, 63, 94, 0.08) 0%, rgba(249, 115, 22, 0.05) 50%, transparent 100%);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090812;
+}
+::-webkit-scrollbar-thumb {
+  background: #282142;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e;
+}
+
